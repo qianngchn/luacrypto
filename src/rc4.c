@@ -2,7 +2,7 @@
 
 static inline void swap(uint8_t *a, uint8_t *b) { uint8_t c = *a; *a = *b; *b = c; }
 
-void rc4_reset(RC4_State *state, const uint8_t *key, size_t len) {
+void rc4_reset(RC4_STATE *state, const uint8_t *key, size_t len) {
     size_t i = 0;
     uint8_t j = 0;
 
@@ -17,7 +17,7 @@ void rc4_reset(RC4_State *state, const uint8_t *key, size_t len) {
     }
 }
 
-void rc4_crypt(RC4_State *state, const uint8_t *in, uint8_t *out, size_t len) {
+void rc4_crypt(RC4_STATE *state, const uint8_t *in, uint8_t *out, size_t len) {
     size_t i = 0;
     uint8_t j = 0;
 

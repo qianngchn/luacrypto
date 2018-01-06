@@ -12,10 +12,10 @@ typedef struct rc4_state {
     uint8_t sbox[256];
     uint8_t idx1;
     uint8_t idx2;
-} RC4_State;
+} RC4_STATE;
 
-void rc4_reset(RC4_State *state, const uint8_t *key, size_t len);
-void rc4_crypt(RC4_State *state, const uint8_t *in, uint8_t *out, size_t len);
+void rc4_reset(RC4_STATE *state, const uint8_t *key, size_t len);
+void rc4_crypt(RC4_STATE *state, const uint8_t *in, uint8_t *out, size_t len);
 
 #ifdef __cplusplus
 }

@@ -16,4 +16,4 @@ luacrypto is very easy to build. Here is a simple instructions.
         cd luacrypto
         make mingw
 
-To build, you should install Lua(>= 5.3.4) headers first to build successfully.
+To build, you should install Lua (>= 5.3.4) headers first to build successfully.

@@ -2,7 +2,7 @@
 
 #define CRC32_POLY 0xEDB88320U
 
-void crc32_init(CRC32_Handle *handle, uint32_t init) {
+void crc32_init(CRC32_HANDLE *handle, uint32_t init) {
     size_t i = 0, j = 0;
 
     for (i = 0; i < 256; i++) {
@@ -18,7 +18,7 @@ void crc32_init(CRC32_Handle *handle, uint32_t init) {
     handle->crc32 = handle->init = init;
 }
 
-void crc32_update(CRC32_Handle *handle, const uint8_t *buf, size_t len) {
+void crc32_update(CRC32_HANDLE *handle, const uint8_t *buf, size_t len) {
     handle->crc32 ^= 0xFFFFFFFFU;
 
     while (len--)
